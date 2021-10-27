@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdT-x2-rKT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -43,7 +43,7 @@
         <!--Homebook-->
         <scene sceneID="MZt-77-Tah">
             <objects>
-                <viewController id="psf-SH-EhJ" sceneMemberID="viewController">
+                <viewController id="psf-SH-EhJ" customClass="MainViewController" customModule="Homebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Pw-Kt-jtJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="139" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listingCell" rowHeight="296" id="MOa-zj-EGz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listingCell" rowHeight="296" id="MOa-zj-EGz" customClass="ListingTableViewCell" customModule="Homebook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MOa-zj-EGz" id="dRh-3n-5Cm">
@@ -106,12 +106,18 @@
                                                 <constraint firstItem="QLe-yR-4AO" firstAttribute="trailing" secondItem="dRh-3n-5Cm" secondAttribute="trailingMargin" id="zLg-Lx-Xm0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="PriceLabel" destination="fg9-PL-foI" id="WJj-Zm-IIe"/>
+                                            <outlet property="detailsLabel" destination="QLe-yR-4AO" id="MbK-bu-0jy"/>
+                                            <outlet property="listingImageview" destination="0bz-hS-0pw" id="8QY-It-5fQ"/>
+                                            <outlet property="locationLabel" destination="Gsd-jD-gJs" id="TQH-9z-gdF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EsC-ev-pk2"/>
-                        <color key="backgroundColor" red="0.88106104270699093" green="0.88106104270699093" blue="0.88106104270699093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EsC-ev-pk2" firstAttribute="trailing" secondItem="it9-Jc-xqT" secondAttribute="trailing" id="KEu-jp-js3"/>
                             <constraint firstItem="ron-Th-AZH" firstAttribute="leading" secondItem="EsC-ev-pk2" secondAttribute="leading" id="bmT-cA-Xo6"/>
@@ -127,6 +133,9 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="it9-Jc-xqT" id="Rx7-jw-RUz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxy-GB-hpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,6 +149,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="0sy-7v-pUD" kind="relationship" relationship="viewControllers" id="eo8-dM-LSp"/>
@@ -151,11 +161,11 @@
             </objects>
             <point key="canvasLocation" x="-269" y="-25"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="GKC-xC-HSx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0sy-7v-pUD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="maY-2V-PgQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="maY-2V-PgQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kxp-bf-OeC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -170,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="621.73913043478262" y="-380.35714285714283"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="Fmp-6A-huG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fYt-qZ-gtK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="X8I-TY-l9H"/>
+                    <tabBarItem key="tabBarItem" title="" image="banknote" catalog="system" id="X8I-TY-l9H"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iI8-F3-Wcj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -189,11 +199,11 @@
             </objects>
             <point key="canvasLocation" x="621.73913043478262" y="276.5625"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="IgC-pa-vaH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C9A-2j-jiP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="s4K-0c-iNa"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="s4K-0c-iNa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PK3-6v-8xR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -210,7 +220,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="banknote" catalog="system" width="128" height="78"/>
         <image name="camera.filters" catalog="system" width="128" height="116"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

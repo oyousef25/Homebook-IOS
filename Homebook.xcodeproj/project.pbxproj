@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB6ECF27271F788900BD41E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF26271F788900BD41E3 /* AppDelegate.swift */; };
 		AB6ECF29271F788900BD41E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF28271F788900BD41E3 /* SceneDelegate.swift */; };
-		AB6ECF2B271F788900BD41E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF2A271F788900BD41E3 /* ViewController.swift */; };
+		AB6ECF2B271F788900BD41E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF2A271F788900BD41E3 /* MainViewController.swift */; };
 		AB6ECF2E271F788900BD41E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6ECF2C271F788900BD41E3 /* Main.storyboard */; };
 		AB6ECF31271F788900BD41E3 /* Homebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF2F271F788900BD41E3 /* Homebook.xcdatamodeld */; };
 		AB6ECF33271F788A00BD41E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6ECF32271F788A00BD41E3 /* Assets.xcassets */; };
@@ -17,6 +17,10 @@
 		AB6ECF41271F788A00BD41E3 /* HomebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF40271F788A00BD41E3 /* HomebookTests.swift */; };
 		AB6ECF4B271F788A00BD41E3 /* HomebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF4A271F788A00BD41E3 /* HomebookUITests.swift */; };
 		AB6ECF4D271F788B00BD41E3 /* HomebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF4C271F788B00BD41E3 /* HomebookUITestsLaunchTests.swift */; };
+		ABF434AE2729EF320098D34A /* SavedListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */; };
+		ABF434B02729EF4F0098D34A /* MortgageCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */; };
+		ABF434B22729EF7A0098D34A /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434B12729EF7A0098D34A /* Listing.swift */; };
+		ABF434B52729EFE60098D34A /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434B42729EFE60098D34A /* ListingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,7 @@
 		AB6ECF23271F788900BD41E3 /* Homebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6ECF26271F788900BD41E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6ECF28271F788900BD41E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB6ECF2A271F788900BD41E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB6ECF2A271F788900BD41E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AB6ECF2D271F788900BD41E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB6ECF30271F788900BD41E3 /* Homebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homebook.xcdatamodel; sourceTree = "<group>"; };
 		AB6ECF32271F788A00BD41E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,10 @@
 		AB6ECF46271F788A00BD41E3 /* HomebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6ECF4A271F788A00BD41E3 /* HomebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomebookUITests.swift; sourceTree = "<group>"; };
 		AB6ECF4C271F788B00BD41E3 /* HomebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingsViewController.swift; sourceTree = "<group>"; };
+		ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorViewController.swift; sourceTree = "<group>"; };
+		ABF434B12729EF7A0098D34A /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		ABF434B42729EFE60098D34A /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +140,9 @@
 		AB6ECF59271F78A400BD41E3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB6ECF2A271F788900BD41E3 /* ViewController.swift */,
+				AB6ECF2A271F788900BD41E3 /* MainViewController.swift */,
+				ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */,
+				ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 		AB6ECF5B271F78BE00BD41E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ABF434B12729EF7A0098D34A /* Listing.swift */,
+				ABF434B32729EFA90098D34A /* TableViewCells */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +172,14 @@
 				AB6ECF34271F788A00BD41E3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ABF434B32729EFA90098D34A /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ABF434B42729EFE60098D34A /* ListingTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6ECF2B271F788900BD41E3 /* ViewController.swift in Sources */,
+				AB6ECF2B271F788900BD41E3 /* MainViewController.swift in Sources */,
+				ABF434B22729EF7A0098D34A /* Listing.swift in Sources */,
+				ABF434B52729EFE60098D34A /* ListingTableViewCell.swift in Sources */,
 				AB6ECF31271F788900BD41E3 /* Homebook.xcdatamodeld in Sources */,
+				ABF434B02729EF4F0098D34A /* MortgageCalculatorViewController.swift in Sources */,
 				AB6ECF27271F788900BD41E3 /* AppDelegate.swift in Sources */,
 				AB6ECF29271F788900BD41E3 /* SceneDelegate.swift in Sources */,
+				ABF434AE2729EF320098D34A /* SavedListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
