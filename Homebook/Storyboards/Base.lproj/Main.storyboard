@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="-380.35714285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Filter View Controller-->
         <scene sceneID="wP3-li-RHM">
             <objects>
-                <viewController id="FZQ-VP-dNo" sceneMemberID="viewController">
+                <viewController id="FZQ-VP-dNo" customClass="FilterViewController" customModule="Homebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yW3-nB-iNc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="2241" y="-1045"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="7tj-14-Lfr">
             <objects>
-                <viewController id="GOz-ln-0Bm" sceneMemberID="viewController">
+                <viewController id="GOz-ln-0Bm" customClass="DetailsViewController" customModule="Homebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yaQ-PR-LN9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

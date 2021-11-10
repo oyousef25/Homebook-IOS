@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB60BA06273C2A15004363EE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60BA05273C2A15004363EE /* DetailsViewController.swift */; };
+		AB60BA08273C2A2A004363EE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB60BA07273C2A2A004363EE /* FilterViewController.swift */; };
 		AB6ECF27271F788900BD41E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF26271F788900BD41E3 /* AppDelegate.swift */; };
 		AB6ECF29271F788900BD41E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF28271F788900BD41E3 /* SceneDelegate.swift */; };
 		AB6ECF2B271F788900BD41E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF2A271F788900BD41E3 /* MainViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB60BA05273C2A15004363EE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AB60BA07273C2A2A004363EE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		AB6ECF23271F788900BD41E3 /* Homebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6ECF26271F788900BD41E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6ECF28271F788900BD41E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				AB6ECF2A271F788900BD41E3 /* MainViewController.swift */,
 				ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */,
 				ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */,
+				AB60BA05273C2A15004363EE /* DetailsViewController.swift */,
+				AB60BA07273C2A2A004363EE /* FilterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -315,7 +321,9 @@
 			files = (
 				AB6ECF2B271F788900BD41E3 /* MainViewController.swift in Sources */,
 				ABF434B22729EF7A0098D34A /* Listing.swift in Sources */,
+				AB60BA06273C2A15004363EE /* DetailsViewController.swift in Sources */,
 				ABF434B52729EFE60098D34A /* ListingTableViewCell.swift in Sources */,
+				AB60BA08273C2A2A004363EE /* FilterViewController.swift in Sources */,
 				AB6ECF31271F788900BD41E3 /* Homebook.xcdatamodeld in Sources */,
 				ABF434B02729EF4F0098D34A /* MortgageCalculatorViewController.swift in Sources */,
 				AB6ECF27271F788900BD41E3 /* AppDelegate.swift in Sources */,

@@ -23,7 +23,8 @@ class MainViewController: UIViewController {
     }
     
     
-    //MARK: Methods
+    //MARK: API Methods
+    
 
 }
 
