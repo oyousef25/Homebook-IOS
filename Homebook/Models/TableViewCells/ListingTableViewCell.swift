@@ -41,16 +41,7 @@ class ListingTableViewCell: UITableViewCell {
         listingImageview.image = UIImage(systemName: "1.square.fill")
         detailsLabel.text = "\(listing.bedroomsTotal ?? 0) bed | \(listing.bathroomsTotalInteger ?? 0) bath"
             
-        //Check if any of the address values is not found
-        if listing.streetNumber == "" ||
-            listing.streetName == "" ||
-            listing.city == "" ||
-            listing.stateOrProvince == "" ||
-            listing.country == ""{
-            //If one of the info is not found, dont display any address info.
-            locationLabel.text = "Address not found..."
-        }else{
-            locationLabel.text = "\(listing.streetNumber ?? "") \(listing.streetName ?? ""),\(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
-        }
+            
+        locationLabel.text = "\(listing.streetNumber ?? "") \(listing.streetName ?? ""), \(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
     }
 }

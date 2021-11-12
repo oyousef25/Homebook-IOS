@@ -18,26 +18,29 @@ struct Listing: Codable{
     /*
         Home page properties
      */
-    var listPrice: Int? = 0
-    var bathroomsTotalInteger: Int? = 0
-    var bedroomsTotal: Int? = 0
+    var listPrice: Int?
+    var bathroomsTotalInteger: Int?
+    var bedroomsTotal: Int?
     
-    var streetNumber: String? = ""
-    var streetName: String? = ""
+    var streetNumber: String?
+    var streetName: String?
     
-    var city: String? = ""
-    var stateOrProvince: String? = ""
-    var country: String? = ""
+    var city: String?
+    var stateOrProvince: String?
+    var country: String?
     
     /*
         details page extra properties
      */
-    var yearBuilt: Int? = 0
-    var propertySubType: String? = ""
-    var listAgentMlsId: String? = ""
-    var onMarketDate: String? = ""
-    var longitude: Double? = 0.0
-    var latitude: Double? = 0.0
+    var yearBuilt: Int?
+    var propertySubType: String?
+    var listAgentMlsId: String?
+    var onMarketDate: String?
+    var livingArea: Int?
+    
+    
+    var longitude: Double?
+    var latitude: Double?
     
     
     /*
@@ -48,23 +51,25 @@ struct Listing: Codable{
         
         do{
             
-        listPrice = try container.decode(Int.self, forKey: .listPrice)
-        bathroomsTotalInteger = try container.decode(Int.self, forKey: .bathroomsTotalInteger)
-        bedroomsTotal = try container.decode(Int.self, forKey: .bedroomsTotal)
-        
-        streetNumber = try container.decode(String.self, forKey: .streetNumber)
-        streetName = try container.decode(String.self, forKey: .streetName)
-        
-        city = try container.decode(String.self, forKey: .city)
-        stateOrProvince = try container.decode(String.self, forKey: .stateOrProvince)
-        country = try container.decode(String.self, forKey: .country)
-        
-        yearBuilt = try container.decode(Int.self, forKey: .yearBuilt)
-        propertySubType = try container.decode(String.self, forKey: .propertySubType)
-        listAgentMlsId = try container.decode(String.self, forKey: .listAgentMlsId)
-        onMarketDate = try container.decode(String.self, forKey: .onMarketDate)
-        longitude = try container.decode(Double.self, forKey: .longitude)
-        latitude = try container.decode(Double.self, forKey: .latitude)
+            listPrice = try container.decode(Int.self, forKey: .listPrice)
+            bathroomsTotalInteger = try container.decode(Int.self, forKey: .bathroomsTotalInteger)
+            bedroomsTotal = try container.decode(Int.self, forKey: .bedroomsTotal)
+            
+            streetNumber = try container.decode(String.self, forKey: .streetNumber)
+            streetName = try container.decode(String.self, forKey: .streetName)
+            
+            city = try container.decode(String.self, forKey: .city)
+            stateOrProvince = try container.decode(String.self, forKey: .stateOrProvince)
+            country = try container.decode(String.self, forKey: .country)
+            
+            yearBuilt = try container.decode(Int.self, forKey: .yearBuilt)
+            propertySubType = try container.decode(String.self, forKey: .propertySubType)
+            listAgentMlsId = try container.decode(String.self, forKey: .listAgentMlsId)
+            onMarketDate = try container.decode(String.self, forKey: .onMarketDate)
+            livingArea = try container.decode(Int.self, forKey: .livingArea)
+                
+            longitude = try container.decode(Double.self, forKey: .longitude)
+            latitude = try container.decode(Double.self, forKey: .latitude)
             
         }catch{
             streetNumber = "Not found"
@@ -89,6 +94,8 @@ struct Listing: Codable{
         try container.encode(propertySubType, forKey: .propertySubType)
         try container.encode(listAgentMlsId, forKey: .listAgentMlsId)
         try container.encode(onMarketDate, forKey: .onMarketDate)
+        try container.encode(livingArea, forKey: .livingArea)
+        
         try container.encode(longitude, forKey: .longitude)
         try container.encode(latitude, forKey: .latitude)
     }
@@ -117,6 +124,7 @@ struct Listing: Codable{
         case propertySubType = "PropertySubType"
         case listAgentMlsId = "ListAgentMlsId"
         case onMarketDate = "OnMarketDate"
+        case livingArea = "LivingArea"
         case longitude = "Longitude"
         case latitude = "Latitude"
     }

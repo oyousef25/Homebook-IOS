@@ -148,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search State (ex: Michigan)" translatesAutoresizingMaskIntoConstraints="NO" id="ron-Th-AZH">
+                            <searchBar contentMode="redraw" placeholder="Search State (ex: Ohio)" translatesAutoresizingMaskIntoConstraints="NO" id="ron-Th-AZH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -382,16 +382,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-ql-Wme">
-                                                <rect key="frame" x="0.0" y="114" width="338.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="114" width="205.5" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listed By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-iO-kwB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Listed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-iO-kwB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Royal Lepage Windsor Realty Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEB-BL-Tau">
-                                                        <rect key="frame" x="86" y="0.0" width="252.5" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="11 - 11 - 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEB-BL-Tau">
+                                                        <rect key="frame" x="103" y="0.0" width="102.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -423,10 +423,16 @@
                     <navigationItem key="navigationItem" id="UTe-ge-BzQ"/>
                     <connections>
                         <outlet property="listingAddress" destination="u3G-la-zZS" id="t9o-VD-Fi3"/>
+                        <outlet property="listingDate" destination="OEB-BL-Tau" id="Gcf-l1-KjT"/>
                         <outlet property="listingDetails" destination="R4Y-2Q-Vl8" id="6D7-hh-plx"/>
                         <outlet property="listingImage" destination="OTz-qw-UMM" id="rVK-jY-3dc"/>
                         <outlet property="listingLocation" destination="JBN-Ws-QSB" id="Ig5-dm-FBw"/>
+                        <outlet property="listingMapview" destination="M90-gw-927" id="G6x-hO-qNZ"/>
+                        <outlet property="listingMls" destination="Nsq-79-eKF" id="ywU-Qo-g3Y"/>
                         <outlet property="listingPrice" destination="sx3-Qy-Pw7" id="VM3-1M-N6q"/>
+                        <outlet property="listingSqft" destination="IJY-a3-5XY" id="QDX-ea-j00"/>
+                        <outlet property="listingType" destination="gAb-6B-GXQ" id="j6j-nJ-B9m"/>
+                        <outlet property="listingYear" destination="m2I-6h-lPh" id="TJG-YC-5K2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s36-qO-Ztf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         
         //Create an API URL using the user's input
-        let url = createListingURL(for: "Michigan")
+        let url = createListingURL(for: "Florida")
         
         if let apiUrl = url{
             //Fetch listings form the API
