@@ -8,22 +8,26 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    /*
+        MARK: Properties
+     */
+    var listing: Listing!
+    
+    /*
+        MARK: Outlets
+    */
+    @IBOutlet weak var listingImage: UIImageView!
+    @IBOutlet weak var listingAddress: UILabel!
+    @IBOutlet weak var listingLocation: UILabel!
+    @IBOutlet weak var listingDetails: UILabel!
+    @IBOutlet weak var listingPrice: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -148,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ron-Th-AZH">
+                            <searchBar contentMode="redraw" placeholder="Search State (ex: Michigan)" translatesAutoresizingMaskIntoConstraints="NO" id="ron-Th-AZH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -239,6 +239,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="ron-Th-AZH" id="LLz-XM-yQk"/>
                         <outlet property="tableView" destination="it9-Jc-xqT" id="Rx7-jw-RUz"/>
                     </connections>
                 </viewController>
@@ -420,6 +421,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UTe-ge-BzQ"/>
+                    <connections>
+                        <outlet property="listingAddress" destination="u3G-la-zZS" id="t9o-VD-Fi3"/>
+                        <outlet property="listingDetails" destination="R4Y-2Q-Vl8" id="6D7-hh-plx"/>
+                        <outlet property="listingImage" destination="OTz-qw-UMM" id="rVK-jY-3dc"/>
+                        <outlet property="listingLocation" destination="JBN-Ws-QSB" id="Ig5-dm-FBw"/>
+                        <outlet property="listingPrice" destination="sx3-Qy-Pw7" id="VM3-1M-N6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s36-qO-Ztf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

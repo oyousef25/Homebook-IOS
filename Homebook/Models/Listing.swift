@@ -7,23 +7,117 @@
 
 import Foundation
 
-class Listing{
+struct Listings: Codable{
+    var value: [Listing]
+}
+
+struct Listing: Codable{
     //MARK: Properties
-    var id: UUID?
-    var mlsNumber: Array<Any>?
-    var brokerage: String?
-    var listDate: String?
+    var listingId: UUID?
     
-    var map: Array<Any>?
-    var area: Array<Any>?
-    var city: Array<Any>?
+    /*
+        Home page properties
+     */
+    var listPrice: Int? = 0
+    var bathroomsTotalInteger: Int? = 0
+    var bedroomsTotal: Int? = 0
     
-    var streetNumber: String?
-    var streetName: String?
+    var streetNumber: String? = ""
+    var streetName: String? = ""
     
-    var maxBaths: Int?
-    var maxBeds: Int?
-    var maxSqft: Int?
-    var maxPrice: Int?
+    var city: String? = ""
+    var stateOrProvince: String? = ""
+    var country: String? = ""
     
+    /*
+        details page extra properties
+     */
+    var yearBuilt: Int? = 0
+    var propertySubType: String? = ""
+    var listAgentMlsId: String? = ""
+    var onMarketDate: String? = ""
+    var longitude: Double? = 0.0
+    var latitude: Double? = 0.0
+    
+    
+    /*
+        Encoding and Decoding methods to conform to the protocols
+     */
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        do{
+            
+        listPrice = try container.decode(Int.self, forKey: .listPrice)
+        bathroomsTotalInteger = try container.decode(Int.self, forKey: .bathroomsTotalInteger)
+        bedroomsTotal = try container.decode(Int.self, forKey: .bedroomsTotal)
+        
+        streetNumber = try container.decode(String.self, forKey: .streetNumber)
+        streetName = try container.decode(String.self, forKey: .streetName)
+        
+        city = try container.decode(String.self, forKey: .city)
+        stateOrProvince = try container.decode(String.self, forKey: .stateOrProvince)
+        country = try container.decode(String.self, forKey: .country)
+        
+        yearBuilt = try container.decode(Int.self, forKey: .yearBuilt)
+        propertySubType = try container.decode(String.self, forKey: .propertySubType)
+        listAgentMlsId = try container.decode(String.self, forKey: .listAgentMlsId)
+        onMarketDate = try container.decode(String.self, forKey: .onMarketDate)
+        longitude = try container.decode(Double.self, forKey: .longitude)
+        latitude = try container.decode(Double.self, forKey: .latitude)
+            
+        }catch{
+            streetNumber = "Not found"
+        }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(listPrice, forKey: .listPrice)
+        try container.encode(bathroomsTotalInteger, forKey: .bathroomsTotalInteger)
+        try container.encode(bedroomsTotal, forKey: .bedroomsTotal)
+        
+        try container.encode(streetNumber, forKey: .streetNumber)
+        try container.encode(streetName, forKey: .streetName)
+        
+        try container.encode(city, forKey: .city)
+        try container.encode(stateOrProvince, forKey: .stateOrProvince)
+        try container.encode(country, forKey: .country)
+        
+        try container.encode(yearBuilt, forKey: .yearBuilt)
+        try container.encode(propertySubType, forKey: .propertySubType)
+        try container.encode(listAgentMlsId, forKey: .listAgentMlsId)
+        try container.encode(onMarketDate, forKey: .onMarketDate)
+        try container.encode(longitude, forKey: .longitude)
+        try container.encode(latitude, forKey: .latitude)
+    }
+    
+    /*
+     MARK: Coding Keys
+     We will use this to match our variables with the API's values
+     */
+    enum CodingKeys: String, CodingKey{
+        case listingID = "ListingID"
+        case listPrice = "ListPrice"
+        case bathroomsTotalInteger = "BathroomsTotalInteger"
+        case bedroomsTotal = "BedroomsTotal"
+        
+        case streetNumber = "StreetNumber"
+        case streetName = "StreetName"
+        
+        case city = "City"
+        case stateOrProvince = "StateOrProvince"
+        case country = "Country"
+        
+        /*
+            details page extra properties
+         */
+        case yearBuilt = "YearBuilt"
+        case propertySubType = "PropertySubType"
+        case listAgentMlsId = "ListAgentMlsId"
+        case onMarketDate = "OnMarketDate"
+        case longitude = "Longitude"
+        case latitude = "Latitude"
+    }
 }
