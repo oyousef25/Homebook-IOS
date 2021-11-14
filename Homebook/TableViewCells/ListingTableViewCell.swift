@@ -17,13 +17,10 @@ class ListingTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     //MARK: Methods
@@ -44,4 +41,12 @@ class ListingTableViewCell: UITableViewCell {
             
         locationLabel.text = "\(listing.streetNumber ?? "") \(listing.streetName ?? ""), \(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
     }
+    
+    /*
+        MARK: Loading listing image methods
+     */
+    
+    //buildImageUrl()
+    
+    //loadImage()
 }

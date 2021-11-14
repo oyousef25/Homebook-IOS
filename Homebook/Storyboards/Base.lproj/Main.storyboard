@@ -11,7 +11,7 @@
         <!--Mortgage Calculator-->
         <scene sceneID="via-AT-BcA">
             <objects>
-                <viewController id="a2X-L2-sIe" sceneMemberID="viewController">
+                <viewController id="a2X-L2-sIe" customClass="MortgageCalculatorViewController" customModule="Homebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W4U-mK-rAA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,22 +57,22 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$999.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-z7-l8O">
                                                         <rect key="frame" x="0.0" y="0.0" width="175.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.8" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZc-Ye-GVn">
                                                         <rect key="frame" x="0.0" y="59" width="175.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="25" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OwT-PQ-3n5">
                                                         <rect key="frame" x="0.0" y="118" width="175.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="999.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hF9-sg-WGy">
                                                         <rect key="frame" x="0.0" y="177" width="175.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -104,6 +104,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="calculateButton:" destination="a2X-L2-sIe" eventType="touchUpInside" id="HdF-Q4-wSM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -119,6 +122,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mortgage Calculator" id="wi3-ZQ-QFI"/>
+                    <connections>
+                        <outlet property="calculationResult" destination="iXb-0M-6gt" id="Jcf-Ka-E1w"/>
+                        <outlet property="downPayment" destination="hF9-sg-WGy" id="7gt-Yi-8iy"/>
+                        <outlet property="interestRate" destination="pZc-Ye-GVn" id="l5W-nR-8YL"/>
+                        <outlet property="loanAmount" destination="bwb-z7-l8O" id="cwO-FE-dJ4"/>
+                        <outlet property="loanPeriod" destination="OwT-PQ-3n5" id="eNi-4K-CAo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLv-Ac-BbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

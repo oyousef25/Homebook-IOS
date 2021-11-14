@@ -115,6 +115,7 @@
 		AB6ECF25271F788900BD41E3 /* Homebook */ = {
 			isa = PBXGroup;
 			children = (
+				ABF434B32729EFA90098D34A /* TableViewCells */,
 				AB6ECF5C271F78C600BD41E3 /* Storyboards */,
 				AB6ECF5B271F78BE00BD41E3 /* Models */,
 				AB6ECF5A271F78B400BD41E3 /* Delegates */,
@@ -169,7 +170,6 @@
 			children = (
 				AB6576252740482900B3AE64 /* LocationPin.swift */,
 				ABF434B12729EF7A0098D34A /* Listing.swift */,
-				ABF434B32729EFA90098D34A /* TableViewCells */,
 			);
 			path = Models;
 			sourceTree = "<group>";

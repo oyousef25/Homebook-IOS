@@ -8,22 +8,30 @@
 import UIKit
 
 class MortgageCalculatorViewController: UIViewController {
+    //MARK: Outlets
+    @IBOutlet weak var loanAmount: UITextField!
+    
+    @IBOutlet weak var interestRate: UITextField!
+    
+    @IBOutlet weak var loanPeriod: UITextField!
+    
+    @IBOutlet weak var downPayment: UITextField!
+    
+    @IBOutlet weak var calculationResult: UILabel!
+    
+    
+    //MARK: Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: Calculation methods
+    
+    //MARK: Actions
+    @IBAction func calculateButton(_ sender: Any) {
+        calculationResult.text = "$500.00"
     }
-    */
-
 }
