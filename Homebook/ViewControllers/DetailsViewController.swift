@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         MARK: Properties
      */
     var listing: Listing!
+    let formatter = NumberFormatter()
     
     /*
         MARK: Outlets
@@ -35,7 +36,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         //A fortmatter that we are going to use later to format our listing price
-        let formatter = NumberFormatter()
         formatter.numberStyle = .currency
 
         /*
@@ -92,10 +92,13 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         //Setting the region on the map using our coordinates
         listingMapview.setRegion(coordinateRegion, animated: true)
         
-        let listingAddress = "\(String(describing: listing.streetNumber))\(listing.streetName ?? "")"
+        let listingAddress = "\(listing.streetNumber ?? "") \(listing.streetName ?? "")"
+        
+        formatter.numberStyle = .currency
+        let price = formatter.string(from: NSNumber(value: listing.listPrice ?? 0)) ?? ""
         
         //Creating our pin
-        let pin = LocationPin(title: listing.listPrice ?? 0, subTitle: listingAddress, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        let pin = LocationPin(title: price, subTitle: listingAddress, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
 
         //Adding our pin to the mapview
         listingMapview.addAnnotation(pin)
@@ -109,7 +112,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         guard annotation is LocationPin else{return nil}
         
         //Storing our identifier
-        let identifier = "listing"
+        let identifier = "Listing"
         
         //Creating our view
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)

@@ -15,14 +15,14 @@ import MapKit
 class LocationPin: NSObject, MKAnnotation{
     
     //MARK: Properties
-    var title: Int?
+    var title: String?
     var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     
     /*
         MARK: Class initializer
      */
-    init(title: Int, subTitle: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, subTitle: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.subtitle = subTitle
         self.coordinate = coordinate
