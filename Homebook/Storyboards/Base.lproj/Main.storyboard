@@ -372,6 +372,14 @@
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="maxBaths" destination="yhw-Os-P8u" id="the-Ug-n6o"/>
+                        <outlet property="maxBeds" destination="mMR-A6-Flo" id="yjo-Au-kIG"/>
+                        <outlet property="maxPrice" destination="ruN-6o-lJf" id="jHm-BP-7sG"/>
+                        <outlet property="minBaths" destination="qV7-u3-1Eb" id="T8h-nG-EaW"/>
+                        <outlet property="minBeds" destination="sAe-Nf-3Mc" id="GZw-OG-l5h"/>
+                        <outlet property="minPrice" destination="xJy-bK-UVB" id="AB3-8v-DeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oe9-bV-cY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,17 @@
 import UIKit
 
 class FilterViewController: UIViewController {
+    //MARK: Outlets
+    @IBOutlet weak var minPrice: UITextField!
+    @IBOutlet weak var maxPrice: UITextField!
+    @IBOutlet weak var minBeds: UITextField!
+    @IBOutlet weak var maxBeds: UITextField!
+    @IBOutlet weak var minBaths: UITextField!
+    @IBOutlet weak var maxBaths: UITextField!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
