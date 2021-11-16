@@ -40,13 +40,55 @@ class ListingTableViewCell: UITableViewCell {
             
             
         locationLabel.text = "\(listing.streetNumber ?? "") \(listing.streetName ?? ""), \(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
+        
+        //TODO: Pass the listing image
+        //get the poster path string
+        //guard let posterPath = listing.media else { return }
+        
+        //Default image
+        let posterPath = "https://s3.amazonaws.com/retsly-importd-production/test_data/listings/18.jpg"
+        
+        //build a url to fetch the album and load the image
+        if let url = buildImageUrl(for: posterPath){
+            print(url)
+            loadPoster(url: url, forCell: self)
+        }
     }
+    
     
     /*
         MARK: Loading listing image methods
      */
+    /*
+     buildImageUrl()
+     This method will turn the image's string into a url to use later for image displaying
+     */
+    func buildImageUrl(for path: String) -> URL? {
+        let imagePath = path
+        
+        guard let imageURL = URL(string: imagePath) else { return nil}
+
+        return imageURL
+    }
     
-    //buildImageUrl()
-    
-    //loadImage()
+    /*
+     loadImage()
+     */
+    func loadPoster(url: URL, forCell cell: ListingTableViewCell){
+        /*
+         Starting a new URL session to read the image from the url
+         */
+        let session = URLSession.shared
+        
+        let task = session.downloadTask(with: url){
+            url, response, error in
+            
+            if error == nil, let url = url, let data = try? Data(contentsOf: url), let posterImage = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    cell.listingImageview.image = posterImage
+                }
+            }
+        }
+        task.resume()
+    }
 }

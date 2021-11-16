@@ -74,6 +74,20 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         
         //Calling our method to place the pin on the map
         centerOnPin()
+        
+        //Load our listing image from the API
+        //TODO: Pass the listing image
+        //get the poster path string
+        //guard let posterPath = listing.media else { return }
+        
+        //Default image
+        let posterPath = "https://s3.amazonaws.com/retsly-importd-production/test_data/listings/18.jpg"
+        
+        //build a url to fetch the album and load the image
+        if let url = buildImageUrl(for: posterPath){
+            print(url)
+            loadPoster(url: url, forView: listingImage)
+        }
     }
     
     //MARK: Mapview method
@@ -130,5 +144,41 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         
         //returning our view
         return annotationView
+    }
+    
+    /*
+        MARK: Loading listing image methods
+     */
+    /*
+     buildImageUrl()
+     This method will turn the image's string into a url to use later for image displaying
+     */
+    func buildImageUrl(for path: String) -> URL? {
+        let imagePath = path
+        
+        guard let imageURL = URL(string: imagePath) else { return nil}
+
+        return imageURL
+    }
+    
+    /*
+     loadImage()
+     */
+    func loadPoster(url: URL, forView imageview: UIImageView){
+        /*
+         Starting a new URL session to read the image from the url
+         */
+        let session = URLSession.shared
+        
+        let task = session.downloadTask(with: url){
+            url, response, error in
+            
+            if error == nil, let url = url, let data = try? Data(contentsOf: url), let posterImage = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    imageview.image = posterImage
+                }
+            }
+        }
+        task.resume()
     }
 }
