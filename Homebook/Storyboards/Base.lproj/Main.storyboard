@@ -379,6 +379,9 @@
                     <navigationItem key="navigationItem" id="iG0-OV-gd1">
                         <barButtonItem key="rightBarButtonItem" title="Apply" id="zPl-iy-axV">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="applyTapped:" destination="FZQ-VP-dNo" id="PQu-lr-qok"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -78,10 +78,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         //Load our listing image from the API
         //TODO: Pass the listing image
         //get the poster path string
-        //guard let posterPath = listing.mediaURL else { return }
-        
-        //Default image
-        let posterPath = "https://s3.amazonaws.com/retsly-importd-production/test_data/listings/18.jpg"
+        guard let posterPath = listing.media?[0].mediaURL else { return }
         
         //build a url to fetch the album and load the image
         if let url = buildImageUrl(for: posterPath){

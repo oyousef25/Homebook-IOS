@@ -18,7 +18,7 @@ struct Listing: Codable{
     /*
         Home page properties
      */
-    var mediaURL: String?
+    var media: [Media]?
     var listPrice: Int?
     var bathroomsTotalInteger: Int?
     var bedroomsTotal: Int?
@@ -71,7 +71,7 @@ struct Listing: Codable{
             longitude = try container.decode(Double.self, forKey: .longitude)
             latitude = try container.decode(Double.self, forKey: .latitude)
             
-            mediaURL = try container.decode(String.self, forKey: .mediaURL)
+            media = try container.decode([Media].self, forKey: .media)
             
         }catch{
             streetNumber = "Not found"
@@ -101,7 +101,7 @@ struct Listing: Codable{
         try container.encode(longitude, forKey: .longitude)
         try container.encode(latitude, forKey: .latitude)
         
-        try container.encode(mediaURL, forKey: .mediaURL)
+        try container.encode(media, forKey: .media)
     }
     
     /*
@@ -109,7 +109,7 @@ struct Listing: Codable{
      We will use this to match our variables with the API's values
      */
     enum CodingKeys: String, CodingKey{
-        case mediaURL = "MediaURL"
+        case media = "Media"
         case listingID = "ListingID"
         case listPrice = "ListPrice"
         case bathroomsTotalInteger = "BathroomsTotalInteger"

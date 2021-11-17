@@ -35,7 +35,6 @@ class ListingTableViewCell: UITableViewCell {
          Populating our views with data from the listing object
          */
         PriceLabel.text = formatter.string(from: NSNumber(value: listing.listPrice ?? 0))
-        listingImageview.image = UIImage(systemName: "1.square.fill")
         detailsLabel.text = "\(listing.bedroomsTotal ?? 0) bed | \(listing.bathroomsTotalInteger ?? 0) bath"
             
             
@@ -44,10 +43,7 @@ class ListingTableViewCell: UITableViewCell {
         
         //TODO: Pass the listing image
         //get the poster path string
-        //guard let posterPath = listing.mediaURL else { return }
-        
-        //Default image
-        let posterPath = "https://s3.amazonaws.com/retsly-importd-production/test_data/listings/18.jpg"
+        guard let posterPath = listing.media?[0].mediaURL else { return }
         
         //build a url to fetch the album and load the image
         if let url = buildImageUrl(for: posterPath){

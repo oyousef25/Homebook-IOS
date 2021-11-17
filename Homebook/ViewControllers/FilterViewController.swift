@@ -16,20 +16,36 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var minBaths: UITextField!
     @IBOutlet weak var maxBaths: UITextField!
     
+    
+    //MARK: Properties
+    var listings = [Listing]()
+    var filteredListings = [Listing]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        MARK: Filtering methods
+     */
+    //This method will take the vlaue of our 6 outlets
+    func applyFilter(listings: [Listing]){
+        //listings.filter()
+        
+        
     }
-    */
+//    func applyFilter(minPrice: (Int) -> Bool, maxPrice: (Int) -> Bool, minBeds: (Int) -> Bool, maxBeds: (Int) -> Bool, minBaths: (Int) -> Bool, maxBaths: (Int) -> Bool){
+//
+//
+//
+//    }
 
+    @IBAction func applyTapped(_ sender: Any) {
+//        let ac = UIAlertController(title: "Success!", message: "Filter operation applied successfully!", preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+//        present(ac, animated: true)
+        
+        navigationController?.popViewController(animated: true)
+    }
 }
