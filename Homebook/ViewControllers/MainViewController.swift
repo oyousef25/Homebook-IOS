@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
         
         var urlString = "https://api.bridgedataoutput.com/api/v2/OData/test/Properties?"
         urlString = urlString.appending("access_token=\(apiKey)&")
-        urlString = urlString.appending(#"$"# + "filter=contains(StateOrProvince,%27\(cleanURL)%27)")
+        urlString = urlString.appending(#"$"# + "filter=contains(StateOrProvince,%27\(cleanURL)%27)&$top=20")
         print(urlString)
         
         return URL(string: urlString)
