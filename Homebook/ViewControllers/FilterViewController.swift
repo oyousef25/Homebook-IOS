@@ -16,10 +16,6 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var minBaths: UITextField!
     @IBOutlet weak var maxBaths: UITextField!
     
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
