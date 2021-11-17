@@ -21,6 +21,7 @@
 		AB6ECF4B271F788A00BD41E3 /* HomebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF4A271F788A00BD41E3 /* HomebookUITests.swift */; };
 		AB6ECF4D271F788B00BD41E3 /* HomebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6ECF4C271F788B00BD41E3 /* HomebookUITestsLaunchTests.swift */; };
 		AB9B96D427457A3900EBDE48 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9B96D327457A3900EBDE48 /* Media.swift */; };
+		AB9B96D6274585D200EBDE48 /* SavedListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9B96D5274585D200EBDE48 /* SavedListingTableViewCell.swift */; };
 		ABF434AE2729EF320098D34A /* SavedListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */; };
 		ABF434B02729EF4F0098D34A /* MortgageCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */; };
 		ABF434B22729EF7A0098D34A /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434B12729EF7A0098D34A /* Listing.swift */; };
@@ -63,6 +64,7 @@
 		AB6ECF4A271F788A00BD41E3 /* HomebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomebookUITests.swift; sourceTree = "<group>"; };
 		AB6ECF4C271F788B00BD41E3 /* HomebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AB9B96D327457A3900EBDE48 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		AB9B96D5274585D200EBDE48 /* SavedListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingTableViewCell.swift; sourceTree = "<group>"; };
 		ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingsViewController.swift; sourceTree = "<group>"; };
 		ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorViewController.swift; sourceTree = "<group>"; };
 		ABF434B12729EF7A0098D34A /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				ABF434B42729EFE60098D34A /* ListingTableViewCell.swift */,
+				AB9B96D5274585D200EBDE48 /* SavedListingTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				AB6ECF27271F788900BD41E3 /* AppDelegate.swift in Sources */,
 				AB6ECF29271F788900BD41E3 /* SceneDelegate.swift in Sources */,
 				ABF434AE2729EF320098D34A /* SavedListingsViewController.swift in Sources */,
+				AB9B96D6274585D200EBDE48 /* SavedListingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
