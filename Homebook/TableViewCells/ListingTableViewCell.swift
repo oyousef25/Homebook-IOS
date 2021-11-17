@@ -41,9 +41,10 @@ class ListingTableViewCell: UITableViewCell {
             
         locationLabel.text = "\(listing.streetNumber ?? "") \(listing.streetName ?? ""), \(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
         
+        
         //TODO: Pass the listing image
         //get the poster path string
-        //guard let posterPath = listing.media else { return }
+        //guard let posterPath = listing.mediaURL else { return }
         
         //Default image
         let posterPath = "https://s3.amazonaws.com/retsly-importd-production/test_data/listings/18.jpg"

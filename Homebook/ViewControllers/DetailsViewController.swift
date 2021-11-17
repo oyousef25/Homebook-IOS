@@ -48,7 +48,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         
         listingLocation.text = "\(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
         
-        listingDetails.text = "\(listing.bedroomsTotal ?? 0) bed | \(listing.bathroomsTotalInteger ?? 0) bath"
+        listingDetails.text = "\(listing.bedroomsTotal ?? 0) bed  |  \(listing.bathroomsTotalInteger ?? 0) bath"
         
         listingPrice.text = formatter.string(from: NSNumber(value: listing.listPrice ?? 0))
         
@@ -78,7 +78,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         //Load our listing image from the API
         //TODO: Pass the listing image
         //get the poster path string
-        //guard let posterPath = listing.media else { return }
+        //guard let posterPath = listing.mediaURL else { return }
         
         //Default image
         let posterPath = "https://s3.amazonaws.com/retsly-importd-production/test_data/listings/18.jpg"
