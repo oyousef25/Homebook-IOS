@@ -68,4 +68,23 @@ extension SavedListingsViewController: UITableViewDataSource{
         //Returning our populated cell
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //Getting the current listing
+            let listing = savedListings[indexPath.row]
+            
+            //Delete this item from the core data
+            coreDataStack.persistentContainer.viewContext.delete(listing)
+            
+            //removing the item from the array
+            savedListings.remove(at: indexPath.row)
+            
+            //delete the row from the tableview
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
+            //Save the current state of the core data
+            coreDataStack.saveContext()
+        }
+    }
 }
