@@ -42,17 +42,49 @@ class SavedListingTableViewCell: UITableViewCell {
         listingAddress.text = "\(listing.streetNumber ?? "") \(listing.streetName ?? ""), \(listing.city ?? ""), \(listing.stateOrProvince ?? ""), \(listing.country ?? "")"
 
 
-//        //TODO: Pass the listing image
-//        //get the poster path string
-//        guard let posterPath = listing.media?[0].mediaURL else { return }
-//
-//        //build a url to fetch the album and load the image
-//        if let url = buildImageUrl(for: posterPath){
-//            print(url)
-//            loadPoster(url: url, forCell: self)
-//        }
+        //TODO: Pass the listing image
+        //get the poster path string
+        guard let posterPath = listing.mediaURL else { return }
+
+        //build a url to fetch the album and load the image
+        if let url = buildImageUrl(for: posterPath){
+            print(url)
+            loadPoster(url: url, forCell: self)
+        }
     }
     
     //MARK: Image Loading Methods
     
+    /*
+     buildImageUrl()
+     This method will turn the image's string into a url to use later for image displaying
+     */
+    func buildImageUrl(for path: String) -> URL? {
+        let imagePath = path
+        
+        guard let imageURL = URL(string: imagePath) else { return nil}
+
+        return imageURL
+    }
+    
+    /*
+     loadImage()
+     */
+    func loadPoster(url: URL, forCell cell: SavedListingTableViewCell){
+        /*
+         Starting a new URL session to read the image from the url
+         */
+        let session = URLSession.shared
+        
+        let task = session.downloadTask(with: url){
+            url, response, error in
+            
+            if error == nil, let url = url, let data = try? Data(contentsOf: url), let posterImage = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    cell.listingImage.image = posterImage
+                }
+            }
+        }
+        task.resume()
+    }
 }
