@@ -25,6 +25,7 @@
 		ABED70F82745CB360087EB27 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED70F72745CB360087EB27 /* CoreDataStack.swift */; };
 		ABED70FB2745CB8E0087EB27 /* ListingsList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED70F92745CB8E0087EB27 /* ListingsList+CoreDataClass.swift */; };
 		ABED70FC2745CB8E0087EB27 /* ListingsList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED70FA2745CB8E0087EB27 /* ListingsList+CoreDataProperties.swift */; };
+		ABED70FE2745F6580087EB27 /* SavedListingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED70FD2745F6580087EB27 /* SavedListingsDetailsViewController.swift */; };
 		ABF434AE2729EF320098D34A /* SavedListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */; };
 		ABF434B02729EF4F0098D34A /* MortgageCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */; };
 		ABF434B22729EF7A0098D34A /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF434B12729EF7A0098D34A /* Listing.swift */; };
@@ -71,6 +72,7 @@
 		ABED70F72745CB360087EB27 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		ABED70F92745CB8E0087EB27 /* ListingsList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListingsList+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		ABED70FA2745CB8E0087EB27 /* ListingsList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListingsList+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ABED70FD2745F6580087EB27 /* SavedListingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingsDetailsViewController.swift; sourceTree = "<group>"; };
 		ABF434AD2729EF320098D34A /* SavedListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingsViewController.swift; sourceTree = "<group>"; };
 		ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorViewController.swift; sourceTree = "<group>"; };
 		ABF434B12729EF7A0098D34A /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				ABF434AF2729EF4F0098D34A /* MortgageCalculatorViewController.swift */,
 				AB60BA05273C2A15004363EE /* DetailsViewController.swift */,
 				AB60BA07273C2A2A004363EE /* FilterViewController.swift */,
+				ABED70FD2745F6580087EB27 /* SavedListingsDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				AB6ECF2B271F788900BD41E3 /* MainViewController.swift in Sources */,
 				ABF434B22729EF7A0098D34A /* Listing.swift in Sources */,
 				ABED70FB2745CB8E0087EB27 /* ListingsList+CoreDataClass.swift in Sources */,
+				ABED70FE2745F6580087EB27 /* SavedListingsDetailsViewController.swift in Sources */,
 				AB9B96D427457A3900EBDE48 /* Media.swift in Sources */,
 				ABED70FC2745CB8E0087EB27 /* ListingsList+CoreDataProperties.swift in Sources */,
 				AB60BA06273C2A15004363EE /* DetailsViewController.swift in Sources */,

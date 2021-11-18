@@ -105,11 +105,6 @@ class MainViewController: UIViewController {
         //Passing the selected business object to the details controller
         destinationVC.listing = listings[indexPath.row]
     }
-    
-    /*
-        Actions
-     */
-    
 }
 
 //MARK: TableView DataSource Methods

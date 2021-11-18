@@ -47,6 +47,14 @@ class SavedListingsViewController: UIViewController {
         
     }
     
+    //MARK: Navigation Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //this will have the information about which cell we are navigating to
+        guard let destinationVC = segue.destination as? SavedListingsDetailsViewController, let indexPath = tableview.indexPathForSelectedRow else { return }
+        
+        //Passing the selected business object to the details controller
+        destinationVC.listing = savedListings[indexPath.row]
+    }
 }
 
 //MARK: TableView DataSource Methods
