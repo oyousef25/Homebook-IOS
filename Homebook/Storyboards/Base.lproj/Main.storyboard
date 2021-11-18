@@ -137,7 +137,6 @@
         <!--Saved Listings-->
         <scene sceneID="zQL-K0-sgk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R2f-Su-fmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="wkY-cB-CaZ" customClass="SavedListingsViewController" customModule="Homebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2RU-gb-j3D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -207,6 +206,12 @@
                                                 <constraint firstItem="VGZ-29-9fy" firstAttribute="leading" secondItem="ylK-eX-sXc" secondAttribute="leading" constant="10" id="ghf-9J-BEI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="listingAddress" destination="5u3-OX-GR7" id="F5H-en-4ps"/>
+                                            <outlet property="listingDetails" destination="j2s-Em-XHI" id="2vu-w6-Lq1"/>
+                                            <outlet property="listingImage" destination="oXi-eM-BXm" id="a3H-Tm-qdm"/>
+                                            <outlet property="listingPrice" destination="WOY-hr-1VK" id="ktq-3O-djo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -219,6 +224,7 @@
                         <outlet property="tableview" destination="65Z-CM-ldo" id="14K-44-dSr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2f-Su-fmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="969.64285714285711"/>
         </scene>
@@ -643,7 +649,13 @@
                             <constraint firstItem="eHK-uO-lAs" firstAttribute="top" secondItem="P8n-3G-2CH" secondAttribute="top" constant="10" id="v1Y-8E-10d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UTe-ge-BzQ"/>
+                    <navigationItem key="navigationItem" id="UTe-ge-BzQ">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="oXM-Fh-RrI">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="GOz-ln-0Bm" id="Bc8-cO-XTA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="listingAddress" destination="u3G-la-zZS" id="t9o-VD-Fi3"/>
                         <outlet property="listingDate" destination="OEB-BL-Tau" id="Gcf-l1-KjT"/>

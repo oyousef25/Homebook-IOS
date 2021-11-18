@@ -8,12 +8,16 @@
 import UIKit
 import MapKit
 
+
 class DetailsViewController: UIViewController, MKMapViewDelegate {
     /*
         MARK: Properties
      */
     var listing: Listing!
     let formatter = NumberFormatter()
+    
+    //Core data stack that we are going to use to add the new listing to the savedListingsList
+    lazy var coreDataStack = CoreDataStack(modelName: "Homebook")
     
     /*
         MARK: Outlets
@@ -177,5 +181,50 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
             }
         }
         task.resume()
+    }
+    
+    /*
+        MARK: Actions
+     */
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        //Unwrapping the listing to use its values in the dialog
+        guard let listing = listing else{ return }
+        
+        //Creating a new empty instance of the core data object
+        let savedListingsList = ListingsList(context: coreDataStack.managedContext)
+        
+        /*
+         populating the models properties with the current listing's properties
+         */
+        savedListingsList.mediaURL = listing.media?[0].mediaURL
+        savedListingsList.listPrice = Int32(listing.listPrice ?? 0)
+        savedListingsList.bathroomsTotalInteger = Int32(listing.bathroomsTotalInteger ?? 0)
+        savedListingsList.bedroomsTotal = Int32(listing.bedroomsTotal ?? 0)
+        
+        savedListingsList.streetName = listing.streetName
+        savedListingsList.streetNumber = listing.streetNumber
+        
+        savedListingsList.city = listing.city
+        savedListingsList.stateOrProvince = listing.stateOrProvince
+        savedListingsList.country = listing.country
+        
+        savedListingsList.yearBuilt = Int32(listing.yearBuilt ?? 0)
+        savedListingsList.propertySubType = listing.propertySubType
+        savedListingsList.listAgentMlsId = listing.listAgentMlsId
+        savedListingsList.onMarketDate = listing.onMarketDate
+        savedListingsList.livingArea = Int32(listing.livingArea ?? 0)
+        
+        savedListingsList.longitude = listing.longitude ?? 0
+        savedListingsList.latitude = listing.latitude ?? 0
+        
+        //save the core data stack's current context
+        coreDataStack.saveContext()
+        
+        /*
+         Display an alert controller to give the user a feedback
+         */
+        let ac = UIAlertController(title: "Success!", message: "Listing saved successfully", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        present(ac, animated: true)
     }
 }
